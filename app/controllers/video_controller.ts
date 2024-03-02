@@ -8,8 +8,10 @@ import VideoService from '#services/video_service'
 export default class VideoController {
   constructor(protected videoService: VideoService) {}
 
-  async index() {
-    return this.videoService.getAll()
+  async index(ctx: HttpContext) {
+    const title = ctx.request.qs().title || ''
+
+    return title ? this.videoService.getByTitle(title) : this.videoService.getAll()
   }
 
   async getOneByTitle(ctx: HttpContext) {

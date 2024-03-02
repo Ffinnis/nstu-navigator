@@ -5,8 +5,6 @@ export const createVideoPostValidator = vine.compile(
     title: vine.string().trim().minLength(6),
     description: vine.string().trim(),
     url: vine.string().url(),
-    page: vine.number(),
-    count: vine.number(),
   })
 )
 

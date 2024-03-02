@@ -1,6 +1,6 @@
 import { PaginatedPayload } from '#types/core'
 
-export interface VideoPayload extends PaginatedPayload {
+export interface VideoPayload {
   title: string
   description: string
   url: string

@@ -10,7 +10,6 @@ router
       .group(() => {
         router
           .group(() => {
-            router.get('/:title', [VideoController, 'getOneByTitle'])
             router.post('/', [VideoController, 'addOne'])
             router.put('/', [VideoController, 'editOne'])
             router.delete('/:id', [VideoController, 'deleteOne'])
