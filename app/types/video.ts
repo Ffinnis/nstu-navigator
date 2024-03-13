@@ -1,5 +1,3 @@
-import { PaginatedPayload } from '#types/core'
-
 export interface VideoPayload {
   title: string
   description: string
